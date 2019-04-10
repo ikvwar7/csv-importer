@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="lastHourActivity">
+<head>
+    <title>Формы используемые за последний час</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div ng-controller="lastHourActivityController">
+    <div>Формы используемые за последний час</div>
+    <ul>
+        <li ng-repeat="(user, forms) in report">
+            <p>Пользователь: {{user}}</p>
+            <ul>
+                <li ng-repeat="form in forms">
+                    <span>Идентификатор формы: {{form.formId}}</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script src="last-hour-activity.js"></script>
+</body>
+</html>

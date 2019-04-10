@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="topFive">
+<head>
+    <title>Топ 5 используемых форм</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div ng-controller="TopFiveController">
+    <div>Топ 5 используемых форм</div>
+    <table>
+        <tr ng-repeat="record in report">
+            <td>Идентификатор формы: {{record.formId}}</td>
+            <td>Количество: {{record.amount}}</td>
+        </tr>
+    </table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script src="top-five.js"></script>
+</body>
+</html>

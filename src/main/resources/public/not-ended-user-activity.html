@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="notEndedUserActivity">
+<head>
+    <title>Незавершённые формы</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div ng-controller="notEndedUserActivityController">
+    <div>Незавершённные формы</div>
+    <ul>
+        <li ng-repeat="(user, values) in report">
+            <p>Пользователь: {{user}}</p>
+            <ul>
+                <li ng-repeat="value in values">
+                    <span>Идентификатор формы: {{value.formId}}</span>
+                    <span>Услуга: {{value.grp}}</span>
+                    <span>Шаг: {{value.subType}}</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script src="not-ended-user-activity.js"></script>
+</body>
+</html>
